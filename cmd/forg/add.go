@@ -25,6 +25,15 @@ Commands are stored in ~/.forg/commands.json.`,
 		tag, _ := cmd.Flags().GetString("tag")
 		desc, _ := cmd.Flags().GetString("description")
 
+		if len(args) > 0 {
+			extra := strings.Join(args, " ")
+			if command == "" {
+				command = extra
+			} else {
+				command = command + " " + extra
+			}
+		}
+
 		if command == "" {
 			return fmt.Errorf("flag --command (-c) is required")
 		}
