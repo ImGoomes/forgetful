@@ -21,18 +21,11 @@ Commands are stored in ~/.forg/commands.json.`,
   forg add -c "docker ps -a" -d "List all containers"
   forg add -c "ffmpeg -i input.mp4 -vn output.mp3"`,
 	RunE: func(cmd *cobra.Command, args []string) error {
-		command, _ := cmd.Flags().GetString("command")
+		flag, _ := cmd.Flags().GetString("command")
 		tag, _ := cmd.Flags().GetString("tag")
 		desc, _ := cmd.Flags().GetString("description")
 
-		if len(args) > 0 {
-			extra := strings.Join(args, " ")
-			if command == "" {
-				command = extra
-			} else {
-				command = command + " " + extra
-			}
-		}
+		command := buildCommand(flag, args)
 
 		if command == "" {
 			return fmt.Errorf("flag --command (-c) is required")
@@ -64,6 +57,18 @@ Commands are stored in ~/.forg/commands.json.`,
 		fmt.Printf("✓ Command saved with ID %d (tag: %s)\n", entry.ID, entry.Tag)
 		return nil
 	},
+}
+
+func buildCommand(flag string, args []string) string {
+	extra := strings.Join(args, " ")
+	switch {
+	case flag != "" && extra != "":
+		return flag + " " + extra
+	case flag != "":
+		return flag
+	default:
+		return extra
+	}
 }
 
 func init() {
