@@ -1,12 +1,11 @@
-# forgetful
+<div align="center">
+  <h1>Forgetful</h1>
+  <p><em>Never forget a terminal command again.</em></p>
+</div>
 
 <p align="center">
   <img src="img/forg.jpeg" alt="Dog with question mark" />
 </p>
-
-Never forget a terminal command again.
-
-`forg` saves terminal commands with tags and descriptions so you can find and run them whenever you need.
 
 ## Install
 
