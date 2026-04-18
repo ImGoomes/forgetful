@@ -1,4 +1,8 @@
-# forg
+# forgetful
+
+<p align="center">
+  <img src="img/forg.jpeg" alt="Dog with question mark" />
+</p>
 
 Never forget a terminal command again.
 
@@ -29,6 +33,7 @@ forg add -c "ffmpeg -i input.mp4 -vn output.mp3"
 ```
 
 Flags:
+
 - `-c` — command to save (required)
 - `-t` — tag (optional; defaults to the first word of the command)
 - `-d` — description (optional)
