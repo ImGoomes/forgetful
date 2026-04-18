@@ -1,1 +1,17 @@
+# binário
 forg
+
+# builds
+dist/
+
+# ambiente
+.env
+.env.*
+
+# editor
+.vscode/
+.idea/
+*.swp
+
+# macOS
+.DS_Store
