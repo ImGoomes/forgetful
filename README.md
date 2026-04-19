@@ -4,7 +4,7 @@
 </div>
 
 <p align="center">
-  <img src="img/forg.jpeg" alt="Dog with question mark" />
+  <img src="img/forg.png" alt="Dog with question mark" />
 </p>
 
 ## Install
