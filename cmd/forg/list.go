@@ -37,10 +37,10 @@ var listCmd = &cobra.Command{
 		}
 
 		w := tabwriter.NewWriter(os.Stdout, 0, 0, 2, ' ', 0)
-		fmt.Fprintln(w, "ID\tTAG\tCOMMAND\tDESCRIPTION")
+		fmt.Fprintln(w, "ID\tTAG\tDESCRIPTION\tCOMMAND")
 		fmt.Fprintln(w, "--\t---\t-------\t-----------")
 		for _, e := range entries {
-			fmt.Fprintf(w, "%d\t%s\t%s\t%s\n", e.ID, e.Tag, e.Command, e.Description)
+			fmt.Fprintf(w, "%d\t%s\t%s\t%s\n", e.ID, e.Tag, e.Description, e.Command)
 		}
 		w.Flush()
 		return nil
