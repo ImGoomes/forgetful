@@ -4,9 +4,13 @@ import (
 	"fmt"
 	"os"
 	"sort"
-	"text/tabwriter"
+	"strconv"
 
+	"github.com/fatih/color"
 	"github.com/imgoomes/forgetful/internal/storage"
+	"github.com/olekukonko/tablewriter"
+	"github.com/olekukonko/tablewriter/renderer"
+	"github.com/olekukonko/tablewriter/tw"
 	"github.com/spf13/cobra"
 )
 
@@ -36,13 +40,27 @@ var tagsCmd = &cobra.Command{
 		}
 		sort.Strings(tags)
 
-		w := tabwriter.NewWriter(os.Stdout, 0, 0, 2, ' ', 0)
-		fmt.Fprintln(w, "TAG\tCOMMANDS")
-		fmt.Fprintln(w, "---\t--------")
+		table := tablewriter.NewTable(os.Stdout,
+			tablewriter.WithRenderer(renderer.NewColorized(renderer.ColorizedConfig{
+				Header: renderer.Tint{FG: renderer.Colors{color.FgHiWhite, color.Bold}},
+				Column: renderer.Tint{
+					Columns: []renderer.Tint{
+						{FG: renderer.Colors{color.FgCyan}},                 // Tag
+						{FG: renderer.Colors{color.FgHiYellow, color.Bold}}, // Commands
+					},
+				},
+			})),
+			tablewriter.WithConfig(tablewriter.Config{
+				Row: tw.CellConfig{Alignment: tw.CellAlignment{Global: tw.AlignLeft}},
+			}),
+		)
+
+		table.Header([]string{"Tag", "Commands"})
 		for _, t := range tags {
-			fmt.Fprintf(w, "%s\t%d\n", t, counts[t])
+			table.Append([]string{t, strconv.Itoa(counts[t])})
 		}
-		w.Flush()
+		table.Render()
+
 		return nil
 	},
 }
