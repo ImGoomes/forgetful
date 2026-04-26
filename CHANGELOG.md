@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.8](https://github.com/ImGoomes/forgetful/compare/v0.1.7...v0.1.8) (2026-04-26)
+
+
+### Bug Fixes
+
+* removing clipboard dependency for cross-compilation on pipeline CGO_ENABLED=0 ([#9](https://github.com/ImGoomes/forgetful/issues/9)) ([65036dd](https://github.com/ImGoomes/forgetful/commit/65036dd312d773b3c84003d78808d6fba973587b))
+
 ## [0.1.7](https://github.com/ImGoomes/forgetful/compare/v0.1.6...v0.1.7) (2026-04-26)
 
 
