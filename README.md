@@ -9,11 +9,35 @@
 
 ## Install
 
+### Download binary (Linux and macOS)
+
+Download the latest release from the [releases page](https://github.com/imgoomes/forgetful/releases), extract and move to your PATH:
+
+```sh
+# macOS (Apple Silicon)
+curl -L https://github.com/imgoomes/forgetful/releases/latest/download/forgetful_darwin_arm64.tar.gz | tar -xz
+sudo mv forg /usr/local/bin/
+
+# macOS (Intel)
+curl -L https://github.com/imgoomes/forgetful/releases/latest/download/forgetful_darwin_amd64.tar.gz | tar -xz
+sudo mv forg /usr/local/bin/
+
+# Linux (amd64)
+curl -L https://github.com/imgoomes/forgetful/releases/latest/download/forgetful_linux_amd64.tar.gz | tar -xz
+sudo mv forg /usr/local/bin/
+
+# Linux (arm64)
+curl -L https://github.com/imgoomes/forgetful/releases/latest/download/forgetful_linux_arm64.tar.gz | tar -xz
+sudo mv forg /usr/local/bin/
+```
+
+### Go install
+
 ```sh
 go install github.com/imgoomes/forgetful/cmd/forg@latest
 ```
 
-Or build from source:
+### Build from source
 
 ```sh
 git clone https://github.com/imgoomes/forgetful
