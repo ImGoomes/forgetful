@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.4](https://github.com/ImGoomes/forgetful/compare/forgetful-v0.1.3...forgetful-v0.1.4) (2026-04-26)
+
+
+### Bug Fixes
+
+* adding right github module name ([1b26e6f](https://github.com/ImGoomes/forgetful/commit/1b26e6f1c4410df0a02b616881d0e2b855db36cb))
+
 ## [0.1.3](https://github.com/ImGoomes/forgetful/compare/forgetful-v0.1.2...forgetful-v0.1.3) (2026-04-26)
 
 
