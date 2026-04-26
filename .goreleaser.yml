@@ -26,6 +26,20 @@ archives:
 checksum:
   name_template: checksums.txt
 
+brews:
+  - name: forg
+    repository:
+      owner: imgoomes
+      name: homebrew-tap
+      token: "{{ .Env.HOMEBREW_TAP_TOKEN }}"
+    homepage: "https://github.com/imgoomes/forgetful"
+    description: "Never forget a terminal command again."
+    license: MIT
+    install: |
+      bin.install "forg"
+    test: |
+      system "#{bin}/forg", "--help"
+
 release:
   github:
     owner: imgoomes

@@ -9,6 +9,12 @@
 
 ## Install
 
+### Homebrew (macOS and Linux)
+
+```sh
+brew install imgoomes/tap/forg
+```
+
 ### Download binary (Linux and macOS)
 
 Download the latest release from the [releases page](https://github.com/imgoomes/forgetful/releases), extract and move to your PATH:
