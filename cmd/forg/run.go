@@ -12,10 +12,10 @@ import (
 )
 
 var runCmd = &cobra.Command{
-	Use:          "run <id>",
-	Short:        "Execute a saved command by ID",
-	Long:         `Execute a saved command directly by its ID. Use 'forg list' to see available IDs.`,
-	Example:      `  forg run 1
+	Use:   "run <id>",
+	Short: "Execute a saved command by ID",
+	Long:  `Execute a saved command directly by its ID. Use 'forg list' to see available IDs.`,
+	Example: `  forg run 1
   forg run 5`,
 	Args:         cobra.ExactArgs(1),
 	SilenceUsage: true,
