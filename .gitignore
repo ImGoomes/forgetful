@@ -1,5 +1,6 @@
 # binário
-forg
+/forg
+bin/
 
 # builds
 dist/
