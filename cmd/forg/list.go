@@ -3,10 +3,14 @@ package main
 import (
 	"fmt"
 	"os"
-	"text/tabwriter"
+	"strconv"
 
+	"github.com/fatih/color"
 	"github.com/imgoomes/forgetful/internal/model"
 	"github.com/imgoomes/forgetful/internal/storage"
+	"github.com/olekukonko/tablewriter"
+	"github.com/olekukonko/tablewriter/renderer"
+	"github.com/olekukonko/tablewriter/tw"
 	"github.com/spf13/cobra"
 )
 
@@ -36,13 +40,29 @@ var listCmd = &cobra.Command{
 			return nil
 		}
 
-		w := tabwriter.NewWriter(os.Stdout, 0, 0, 2, ' ', 0)
-		fmt.Fprintln(w, "ID\tTAG\tDESCRIPTION\tCOMMAND")
-		fmt.Fprintln(w, "--\t---\t-------\t-----------")
+		table := tablewriter.NewTable(os.Stdout,
+			tablewriter.WithRenderer(renderer.NewColorized(renderer.ColorizedConfig{
+				Header: renderer.Tint{FG: renderer.Colors{color.FgHiWhite, color.Bold}},
+				Column: renderer.Tint{
+					Columns: []renderer.Tint{
+						{FG: renderer.Colors{color.FgHiYellow, color.Bold}}, // ID
+						{FG: renderer.Colors{color.FgCyan}},                 // Tag
+						{},                                                  // Description
+						{FG: renderer.Colors{color.FgHiGreen}},              // Command
+					},
+				},
+			})),
+			tablewriter.WithConfig(tablewriter.Config{
+				Row: tw.CellConfig{Alignment: tw.CellAlignment{Global: tw.AlignLeft}},
+			}),
+		)
+
+		table.Header([]string{"ID", "Tag", "Description", "Command"})
 		for _, e := range entries {
-			fmt.Fprintf(w, "%d\t%s\t%s\t%s\n", e.ID, e.Tag, e.Description, e.Command)
+			table.Append([]string{strconv.Itoa(e.ID), e.Tag, e.Description, e.Command})
 		}
-		w.Flush()
+		table.Render()
+
 		return nil
 	},
 }
