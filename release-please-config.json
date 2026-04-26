@@ -3,7 +3,6 @@
   "release-type": "go",
   "packages": {
     ".": {
-      "component": "forgetful",
       "changelog-path": "CHANGELOG.md"
     }
   },
