@@ -21,6 +21,7 @@ func main() {
 	rootCmd.AddCommand(deleteCmd)
 	rootCmd.AddCommand(runCmd)
 	rootCmd.AddCommand(tagsCmd)
+	rootCmd.AddCommand(copyCmd)
 
 	if err := rootCmd.Execute(); err != nil {
 		fmt.Fprintln(os.Stderr, err)
