@@ -89,6 +89,13 @@ forg rm 3
 forg remove 3
 ```
 
+### Copy a command to clipboard
+
+```sh
+forg copy 2
+forg cp 2
+```
+
 ### List tags
 
 ```sh
