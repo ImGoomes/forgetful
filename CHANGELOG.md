@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.5](https://github.com/ImGoomes/forgetful/compare/forgetful-v0.1.4...forgetful-v0.1.5) (2026-04-26)
+
+
+### Features
+
+* adding tablewriter for improved table support ([de4efb4](https://github.com/ImGoomes/forgetful/commit/de4efb491d8655af4ec5ec3ffabb1ae381624f03))
+* adding tablewriter for improved table support ([84fc145](https://github.com/ImGoomes/forgetful/commit/84fc145ca82112423ad295ad71def6d4fb3ed304))
+
 ## [0.1.4](https://github.com/ImGoomes/forgetful/compare/forgetful-v0.1.3...forgetful-v0.1.4) (2026-04-26)
 
 
