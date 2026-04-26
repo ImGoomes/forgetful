@@ -1,4 +1,4 @@
-module github.com/gabrielgomes/forgetful
+module github.com/imgoomes/forgetful
 
 go 1.24.2
 

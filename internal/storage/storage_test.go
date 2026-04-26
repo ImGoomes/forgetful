@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gabrielgomes/forgetful/internal/model"
+	"github.com/imgoomes/forgetful/internal/model"
 )
 
 // setHome redirects storePath to a temp directory for the duration of the test.

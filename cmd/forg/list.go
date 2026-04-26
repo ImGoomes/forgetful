@@ -5,8 +5,8 @@ import (
 	"os"
 	"text/tabwriter"
 
-	"github.com/gabrielgomes/forgetful/internal/model"
-	"github.com/gabrielgomes/forgetful/internal/storage"
+	"github.com/imgoomes/forgetful/internal/model"
+	"github.com/imgoomes/forgetful/internal/storage"
 	"github.com/spf13/cobra"
 )
 

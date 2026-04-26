@@ -6,7 +6,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/gabrielgomes/forgetful/internal/model"
+	"github.com/imgoomes/forgetful/internal/model"
 )
 
 func storePath() (string, error) {

@@ -7,7 +7,7 @@ import (
 	"runtime"
 	"strconv"
 
-	"github.com/gabrielgomes/forgetful/internal/storage"
+	"github.com/imgoomes/forgetful/internal/storage"
 	"github.com/spf13/cobra"
 )
 

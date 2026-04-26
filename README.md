@@ -10,13 +10,13 @@
 ## Install
 
 ```sh
-go install github.com/gabrielgomes/forgetful/cmd/forg@latest
+go install github.com/imgoomes/forgetful/cmd/forg@latest
 ```
 
 Or build from source:
 
 ```sh
-git clone https://github.com/gabrielgomes/forgetful
+git clone https://github.com/imgoomes/forgetful
 cd forgetful
 go build -o forg ./cmd/forg
 ```
