@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.7](https://github.com/ImGoomes/forgetful/compare/v0.1.6...v0.1.7) (2026-04-26)
+
+
+### Features
+
+* adding copy command ([#7](https://github.com/ImGoomes/forgetful/issues/7)) ([aaab1fb](https://github.com/ImGoomes/forgetful/commit/aaab1fb4eb92055f34467f5d93dd16909abbcb68))
+
 ## [0.1.6](https://github.com/ImGoomes/forgetful/compare/v0.1.5...v0.1.6) (2026-04-26)
 
 
